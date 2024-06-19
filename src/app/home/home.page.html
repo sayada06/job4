@@ -6,16 +6,16 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content class="ion-padding" [fullscreen]="true">
   <div class="ion-text-center">
     <img width="60%" src="../../assets/img/01.png">
   </div>
 
-
     <ion-card color="secondary">
-      <ion-card class="ion-padding">
-        <ion-input color="dark" label="น้ำหนัก :" type="text" placeholder="kg"></ion-input><br>
-        <ion-input color="dark" label="ส่วนสูง :" type="text" placeholder="cm"></ion-input>
+      <ion-card class="ion-padding" color="dark">
+        <ion-input color="light" label="น้ำหนัก :" type="text" placeholder="kg"></ion-input><br>
+        <ion-input color="light" label="ส่วนสูง :" type="text" placeholder="cm"></ion-input>
       </ion-card>
 
       <div class="ion-text-center">
@@ -25,12 +25,14 @@
       </div>
     </ion-card>
 
+    <div class="custom-button">
       <ion-button color="success" size="large" expand="block" >
         ผลลัพธ์
       </ion-button>
-
+      <hr color="secondary">
       <ion-button color="danger" size="large" expand="block" >
         แปรผล
       </ion-button>
+    </div>
 
 </ion-content>
