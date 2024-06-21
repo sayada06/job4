@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="secondary">
-    <ion-title>
-      APP BMI
+  <ion-toolbar color="tertiary">
+    <ion-title color="dark" class="ion-text-center">
+      <b>APP BMI</b>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,30 +9,35 @@
 
 <ion-content class="ion-padding" [fullscreen]="true">
   <div class="ion-text-center">
-    <img width="60%" src="../../assets/img/01.png">
+    <img width="35%" src="../../assets/img/bmi.png">
   </div>
 
-    <ion-card color="secondary">
-      <ion-card class="ion-padding" color="dark">
-        <ion-input color="light" label="น้ำหนัก :" type="text" placeholder="kg"></ion-input><br>
-        <ion-input color="light" label="ส่วนสูง :" type="text" placeholder="cm"></ion-input>
-      </ion-card>
+    <div class="ion-text-center">
+      <ion-card class="ion-padding" color="secondary">
+        <ion-item color="dark">
+          <ion-input color="light" label="น้ำหนัก :" placeholder="kg"></ion-input><br>
+        </ion-item><br>
+        <ion-item color="dark">
+          <ion-input color="light" label="ส่วนสูง :" placeholder="cm"></ion-input>
+        </ion-item><br>
 
-      <div class="ion-text-center">
-        <ion-button class="ion-padding" color="warning" size="large" expand="block" shape="round">
+        <ion-button class="ion-text-center" color="warning" size="large" expand="block" shape="round">
           คำนวณ
         </ion-button>
-      </div>
-    </ion-card>
-
-    <div class="custom-button">
-      <ion-button color="success" size="large" expand="block" >
-        ผลลัพธ์
-      </ion-button>
-      <hr color="secondary">
-      <ion-button color="danger" size="large" expand="block" >
-        แปรผล
-      </ion-button>
+      </ion-card>
     </div>
+
+      <ion-card color="success" class="ion-text-center">
+        <ion-card-header>
+          <ion-card-subtitle>ผลลัพธ์</ion-card-subtitle>
+          <ion-card-title>37.4</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      <ion-card color="danger" class="ion-text-center">
+        <ion-card-header>
+          <ion-card-subtitle>แปรผล</ion-card-subtitle>
+          <ion-card-title>อยู่ในเกณฑ์ปกติ</ion-card-title>
+        </ion-card-header>
+      </ion-card>
 
 </ion-content>
