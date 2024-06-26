@@ -15,13 +15,13 @@
     <div class="ion-text-center">
       <ion-card class="ion-padding" color="secondary">
         <ion-item color="dark">
-          <ion-input color="light" label="น้ำหนัก :" placeholder="kg"></ion-input><br>
+          <ion-input color="light" label="น้ำหนัก :" placeholder="kg" [(ngModel)]="weight"></ion-input><br>
         </ion-item><br>
         <ion-item color="dark">
-          <ion-input color="light" label="ส่วนสูง :" placeholder="cm"></ion-input>
+          <ion-input color="light" label="ส่วนสูง :" placeholder="cm" [(ngModel)]="hight"></ion-input>
         </ion-item><br>
 
-        <ion-button class="ion-text-center" color="warning" size="large" expand="block" shape="round">
+        <ion-button class="ion-text-center" color="warning" (click)="oncal()" size="large" expand="block" shape="round">
           คำนวณ
         </ion-button>
       </ion-card>
@@ -30,13 +30,14 @@
       <ion-card color="success" class="ion-text-center">
         <ion-card-header>
           <ion-card-subtitle>ผลลัพธ์</ion-card-subtitle>
-          <ion-card-title>37.4</ion-card-title>
+          <ion-card-title>{{ result | number : '1.0-2'}}</ion-card-title>
         </ion-card-header>
       </ion-card>
+
       <ion-card color="danger" class="ion-text-center">
         <ion-card-header>
           <ion-card-subtitle>แปรผล</ion-card-subtitle>
-          <ion-card-title>อยู่ในเกณฑ์ปกติ</ion-card-title>
+          <ion-card-title>{{ result_text }}</ion-card-title>
         </ion-card-header>
       </ion-card>
 
